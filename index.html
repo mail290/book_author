@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreddyBremseth Book Architect | Cyberpunk Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --cyan: #00D9FF;
+        --magenta: #FF006E;
+        --lime: #FFBE0B;
+        --dark: #0A0E27;
+        --dark-lighter: #151b3d;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--dark);
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, h4, .font-mono {
+        font-family: 'Space Mono', monospace;
+      }
+      .font-code {
+        font-family: 'Fira Code', monospace;
+      }
+      .neon-border {
+        box-shadow: 0 0 5px var(--cyan), 0 0 10px var(--cyan);
+        border: 1px solid var(--cyan);
+      }
+      .neon-text-cyan {
+        text-shadow: 0 0 5px var(--cyan), 0 0 10px var(--cyan);
+      }
+      .neon-text-magenta {
+        text-shadow: 0 0 5px var(--magenta), 0 0 10px var(--magenta);
+      }
+      .neon-button-cyan {
+        background: transparent;
+        border: 2px solid var(--cyan);
+        color: var(--cyan);
+        box-shadow: 0 0 5px var(--cyan);
+        transition: all 0.3s ease;
+      }
+      .neon-button-cyan:hover {
+        background: var(--cyan);
+        color: var(--dark);
+        box-shadow: 0 0 20px var(--cyan);
+      }
+      .neon-button-magenta {
+        background: transparent;
+        border: 2px solid var(--magenta);
+        color: var(--magenta);
+        box-shadow: 0 0 5px var(--magenta);
+        transition: all 0.3s ease;
+      }
+      .neon-button-magenta:hover {
+        background: var(--magenta);
+        color: white;
+        box-shadow: 0 0 20px var(--magenta);
+      }
+      .glass {
+        background: rgba(10, 14, 39, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 217, 255, 0.1);
+      }
+      .cyber-grid {
+        background-image: linear-gradient(rgba(0, 217, 255, 0.05) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(0, 217, 255, 0.05) 1px, transparent 1px);
+        background-size: 50px 50px;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--dark);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--cyan);
+        border-radius: 10px;
+      }
+      @keyframes pulse-cyan {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+      .animate-pulse-cyan {
+        animation: pulse-cyan 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0"
+  }
+}
+</script>
+</head>
+  <body class="cyber-grid min-h-screen">
+    <div id="root"></div>
+  </body>
+</html>
